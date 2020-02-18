@@ -10,20 +10,4 @@ Please find the attached terraform code and terraform-project.docx for more deta
 # A classic ELB is also created to load balance the request. A bucket should be already created in our account with public access or a instance role should be created to have permission to communicate with S3 service.
 # The ElB URL can be mapped with route53 to serve requests from (www.example.com) - This has not been done in this script as i have not purchased any domain.
 
-User data to be saved on sever,
-
-[root@ip-172-31-86-184 terraform-projects]# cat install_httpd1.sh
-#! /bin/bash
-sudo yum install httpd -y
-sudo yum update -y
-sudo service httpd start
-sudo chkconfig on
-echo "<h1>Deployed via Terraform on webserver1</h1>" | sudo tee /var/www/html/index.html
-
-[root@ip-172-31-86-184 terraform-projects]# cat install_httpd2.sh
-#! /bin/bash
-sudo yum install httpd -y
-sudo yum update -y
-sudo service httpd start
-sudo chkconfig on
-echo "<h1>Deployed via Terraform on webserver2</h1>" | sudo tee /var/www/html/index.html
+For More details, Refer terrafor-project.docx file.
